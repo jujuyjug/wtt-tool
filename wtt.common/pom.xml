@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+		xmlns="http://maven.apache.org/POM/4.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.bitblend.wtt</groupId>
+	<artifactId>wtt-common</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>wtt.common</name>
+	<packaging>pom</packaging>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- buscar dependencias faltantes de greenpages.parent -->
+		</dependencies>
+	</dependencyManagement>
+
+	<repositories>
+		<repository>
+		    <id>com.springsource.repository.bundles.snapshot</id>
+		    <name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Snapshot</name>
+			<url>http://repository.springsource.com/maven/bundles/snapshot</url>
+		</repository>
+		<repository>
+		    <id>com.springsource.repository.bundles.release</id>
+		    <name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
+			<url>http://repository.springsource.com/maven/bundles/release</url>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.bundle.external</id>
+			<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
+			<url>http://repository.springsource.com/maven/bundles/external</url>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.bundle.milestone</id>
+		    <name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Milestones</name>
+			<url>http://repository.springsource.com/maven/bundles/milestone</url>
+		</repository>
+
+		<repository>
+		    <id>com.springsource.repository.libraries.release</id>
+		    <name>SpringSource Enterprise Bundle Repository - SpringSource Library Releases</name>
+		    <url>http://repository.springsource.com/maven/libraries/release</url>
+		</repository>
+		<!-- <repository>
+		    <id>com.springsource.repository.libraries.external</id>
+		    <name>SpringSource Enterprise Bundle Repository - External Library Releases</name>
+		    <url>http://repository.springsource.com/maven/libraries/external</url>
+		</repository>
+		<repository>
+		    <id>com.springsource.repository.libraries.milestone</id>
+		    <name>SpringSource Enterprise Bundle Repository - Milestone Library Releases</name>
+		    <url>http://repository.springsource.com/maven/libraries/milestone</url>
+		</repository>
+		<repository>
+		    <id>com.springsource.repository.libraries.snapshot</id>
+		    <name>SpringSource Enterprise Bundle Repository - Snapshot Library Releases</name>
+		    <url>http://repository.springsource.com/maven/libraries/snapshot</url>
+		</repository> -->
+	</repositories>
+
+	<properties>
+		<maven.test.failure.ignore>true</maven.test.failure.ignore>
+	</properties>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>com.springsource.repository.bundles.release</id>
+			<name>SpringSource Enterprise Bundle Repository - Releases</name>
+			<url>http://repository.springsource.com/maven/bundles/release</url>
+		</pluginRepository>
+		<!-- <pluginRepository>
+			<id>com.springsource.repository.bundles.milestone</id>
+			<name>SpringSource Enterprise Bundle Repository - Milestone</name>
+			<url>http://repository.springsource.com/maven/bundles/milestone</url>
+		</pluginRepository> -->
+	</pluginRepositories>
+
+	<build>
+		<plugins>
+		<!--
+			<plugin>
+				<groupId>com.springsource.bundlor</groupId>
+				<artifactId>com.springsource.bundlor.maven</artifactId>
+				<version>1.0.0.RELEASE</version>
+				<executions>
+					<execution>
+						<id>bundlor</id>
+						<goals>
+							<goal>bundlor</goal>
+						</goals>
+						<phase>package</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archive>
+						<manifestFile>
+							src/main/resources/META-INF/MANIFEST.MF
+						</manifestFile>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12</version>
+				<configuration>
+					<includes>
+						<include>**/*Tests.java</include>
+					</includes>
+					<excludes>
+						<exclude>**/Abstract*.java</exclude>
+					</excludes>
+					<junitArtifactName>org.junit:com.springsource.org.junit</junitArtifactName>
+					<argLine>-javaagent:${user.home}/.m2/repository/org/springframework/org.springframework.instrument/3.0.5.RELEASE/org.springframework.instrument-3.0.5.RELEASE.jar</argLine>
+				</configuration>
+			</plugin>
+		-->
+		</plugins>
+	</build>
+  
+</project>
