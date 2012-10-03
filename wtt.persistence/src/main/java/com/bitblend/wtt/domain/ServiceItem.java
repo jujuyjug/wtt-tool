@@ -2,19 +2,26 @@ package com.bitblend.wtt.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
 
 /**
  *
  * @author zklibur
  */
+@Entity
 public class ServiceItem implements Serializable {
 
+    @Id
     private String id;
     private Type type;
     private String number;
     private String description;
-    private Date create;
-    private Date close;
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date created;
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date closed;
     private Type status;
     private String requestBy;
     private Type priority;
@@ -22,13 +29,13 @@ public class ServiceItem implements Serializable {
     public ServiceItem() {
     }
 
-    public ServiceItem(String id, Type type, String number, String description, Date create, Date close, Type status, String requestBy, Type priority) {
+    public ServiceItem(String id, Type type, String number, String description, Date created, Date closed, Type status, String requestBy, Type priority) {
         this.id = id;
         this.type = type;
         this.number = number;
         this.description = description;
-        this.create = create;
-        this.close = close;
+        this.created = created;
+        this.closed = closed;
         this.status = status;
         this.requestBy = requestBy;
         this.priority = priority;
@@ -43,7 +50,7 @@ public class ServiceItem implements Serializable {
     public int hashCode() {
         int hash = 3;
         hash = 79 * hash + (this.number != null ? this.number.hashCode() : 0);
-        hash = 79 * hash + (this.create != null ? this.create.hashCode() : 0);
+        hash = 79 * hash + (this.created != null ? this.created.hashCode() : 0);
         return hash;
     }
 
@@ -59,7 +66,7 @@ public class ServiceItem implements Serializable {
         if ((this.number == null) ? (other.number != null) : !this.number.equals(other.number)) {
             return false;
         }
-        if (this.create != other.create && (this.create == null || !this.create.equals(other.create))) {
+        if (this.created != other.created && (this.created == null || !this.created.equals(other.created))) {
             return false;
         }
         return true;
@@ -97,20 +104,20 @@ public class ServiceItem implements Serializable {
         this.description = description;
     }
 
-    public Date getCreate() {
-        return create;
+    public Date getCreated() {
+        return created;
     }
 
-    public void setCreate(Date create) {
-        this.create = create;
+    public void setCreated(Date created) {
+        this.created = created;
     }
 
-    public Date getClose() {
-        return close;
+    public Date getClosed() {
+        return closed;
     }
 
-    public void setClose(Date close) {
-        this.close = close;
+    public void setClosed(Date closed) {
+        this.closed = closed;
     }
 
     public Type getStatus() {
