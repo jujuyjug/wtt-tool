@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <import resource="infrastructure.xml" />
+    <!-- Option1: Custom configuration for the custom implementation based on JDBC    
+    <bean id="serviceItemRepositoryJdbc" class="com.bitblend.wtt.persistence.ServiceItemRepositoryJdbcImpl">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    -->
+
+    <!-- Option2
+    <bean id="serviceItemRepositoryJdbc" class="com.bitblend.wtt.persistence.ServiceItemRepositoryJdbcImpl">
+        <property name="template">
+            <bean class="org.springframework.jdbc.core.JdbcTemplate">
+                <property name="dataSource" ref="dataSource" />
+            </bean>
+        </property>
+    </bean>
+    -->
+
+</beans>
